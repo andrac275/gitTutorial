@@ -1,0 +1,48 @@
+##############################################################################
+###Comandos de GIT:###
+1.Inicializar repositorio.
+    Estando en la carpeta donde queremos inicializar el repositiorio git se escribe...
+        git init
+Antes de seguir... Git tiene las siguientes fases:
+    PC->STAGE->COMMIT->SERVER
+        PC: Se crean y se borran archivos en el ordenador. Se pasa al stage con:
+            git add
+        STAGE: Se revisan qué se quiere subir. No tiene por que ser todo. Se pasa al commit con:
+            git commit
+        COMMIT: Aqui se guardan todos los archivos preparados para ser subidos al servidor con...
+            git push
+    Ahora continuamos fase a fase...
+2.Agregando cambios al STAGE:
+
+##############################################################################
+###Comandos de CONFIGURACION:###
+1. Ver la version de git
+    git --version
+2.Asignar un username para git. (Va el username entre comillas dobles!!!)
+    git config --global user.name "Tu nombre de usuario y apellidos"
+3.Asignar el correo para git.
+    git config --global user.email algo@algo.com
+4.Establecer el editor de texto por defecto, la siguiente linea establece VisualStudioCode por defecto
+    git config --global core.editor "code --wait"
+5.Autocrlf. IMPORTANTE!!!!
+    El autocrlf añade o quita un caracter especial segun el SO. Windows lo necesita, asi que debe tenerlo a true (porque un salto de pagina en windows se
+    compone de un "CR" y un "LF", por tanto necesita el CR y por eso va a true), mientras que en linux/Mac, el salto de pagina solo tiene un "LF", no necesita
+    el "CR", por eso en mac o linux se deja con valor "input"
+        git config --global core.autocrlf true      <-Para windows
+        git config --global core.autocrlf input     <-Para Linux/Mac
+6.Comprobar las configuraciones globales.
+    git config --global -e
+
+YA ESTÁ CONFIGURADO GIT, pero si necesitamos cambiar mas cosas... usar el siguiente comando:
+    git config -h
+
+##############################################################################
+###Comandos basicos de bash:###
+1.Listar contenido de donde estamos
+    ls
+2.Ver donde estamos
+    pwd
+3. Moverse entre carpetas
+    cd ruta
+4. Crear carpeta
+    mkdir NombreCarpeta
