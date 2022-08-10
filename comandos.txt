@@ -13,6 +13,13 @@ Antes de seguir... Git tiene las siguientes fases:
             git push
     Ahora continuamos fase a fase...
 2.Agregando cambios al STAGE:
+    -Obtener informacion sobre el estado. Aparecen en ROJO ficheros nuevos que no hayan recibido el add
+    y en VERDE los que ya han tenido el add.
+        git status
+    -Añadir un fichero al stage:
+        git add NombreFichero1 [NombreFichero2 ..]
+        git add *   <- MALA practica! Podemos añadir todo y que todo no nos interese.
+         
 
 ##############################################################################
 ###Comandos de CONFIGURACION:###
