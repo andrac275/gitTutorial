@@ -41,8 +41,16 @@ Antes de seguir... Git tiene las siguientes fases:
         git status -s
 
 6. Visualizar cambios.
-    El siguiente comando muestra los cambios entre el archivo anterior y el archivo que sera añadido al stage que está en rojo aun
+    ANTES DE PASAR A LA ETAPA DE STAGE: El siguiente comando muestra los cambios entre el archivo anterior y el archivo actual que SERA AÑADIDO al stage (que está en rojo aun)
         git diff
+    DESPUES DE HACER UN STAGE (el add): Con el siguiente comando vemos los cambios que se van a pasar a commit antes de hacerlo, es muy importante.
+        git diff --staged
+
+7. Visualizar historial
+    Muestra mucha info del historial... puede abrumar
+        git log   
+    Version simplificada de lo anterior, tiene el id del commit y el nombre del commit.
+        git log --oneline
 
 ##############################################################################
 ###Comandos de CONFIGURACION:###
