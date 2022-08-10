@@ -58,7 +58,23 @@ Ramas:
     git branch
 
 9.Crear y cambiar de rama:
-    git checkout -b NombreRama
+    git checkout -b NombreNuevaRama  <<-- Crea y cambia de rama a la vez
+    git checkout NombreRama <-- Te mueves a NombreRama
+
+10.Merge de una rama a otra
+    IMPORTANTE! Estar en la rama que recibe el merge. Si queremos que 'main' reciba los cambios, pues estar en 'main'
+        gir merge ramaB
+
+11.Conectando con GitHUB
+    El PRIMER PUSH es importante... Se accede a github, se registra/loggea uno y se crea el repositorio.
+    En el propio git aparece que dos lineas copiar...
+        git remote add origin https://github.com/andrac275/gitTutorial  <- para decir el server remoto, en este caso en gitHub, es donde estará nuestro codigo para hacer push o pull
+
+        git push -u origin main     <- -u es para crear la rama main (que la primera vez no esta creada) y se dice que en el 'origin' se quiere que la rama se llame 'main'
+
+        git push -u origin ramaC    <- Añade a gitHub una nueva rama llamada ramaC
+
+        git push    <- El comando tipico para subir al servidor todos los commits hechos.
 
 ##############################################################################
 ###Comandos de CONFIGURACION:###
