@@ -12,14 +12,30 @@ Antes de seguir... Git tiene las siguientes fases:
         COMMIT: Aqui se guardan todos los archivos preparados para ser subidos al servidor con...
             git push
     Ahora continuamos fase a fase...
+
 2.Agregando cambios al STAGE:
     -Obtener informacion sobre el estado. Aparecen en ROJO ficheros nuevos que no hayan recibido el add
     y en VERDE los que ya han tenido el add.
-        git status
+        git status  <- Importante
+
+        Todo lo que está en VERDE, esta en el stage y se guardara al hacer commit.
+        Si se modifican archivos que ya estaban añadidos de antes, tambien se ponen ROJO y hay que añadirlos de nuevo al stage.
+
     -Añadir un fichero al stage:
         git add NombreFichero1 [NombreFichero2 ..]
         git add *   <- MALA practica! Podemos añadir todo y que todo no nos interese.
-         
+
+3.Volviendo del stage y descartar cambios.
+    -Eliminar del stage un cambio que habiamos añadido...
+        git restore --staged NoombreArchivoaDeshacer
+
+    -Si se habia eliminado un fichero a la papelera con el 'git rm ArchivoEliminar'
+    a parte del 'git restore --staged ArchivoEliminar' de antes, hay que...
+        git restore ArchivoEliminar
+4.Renombrar ficheros
+    -Usar el siguiente comando renombra un archivo y lo añade directamente al stage sin tener que usar el add.
+        git mv NombreAnterior NombreNuevo
+
 
 ##############################################################################
 ###Comandos de CONFIGURACION:###
