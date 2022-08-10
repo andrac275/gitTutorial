@@ -52,6 +52,14 @@ Antes de seguir... Git tiene las siguientes fases:
     Version simplificada de lo anterior, tiene el id del commit y el nombre del commit.
         git log --oneline
 
+-------------------
+Ramas:
+8.Ver todas las ramas del proyecto:
+    git branch
+
+9.Crear y cambiar de rama:
+    git checkout -b NombreRama
+
 ##############################################################################
 ###Comandos de CONFIGURACION:###
 1. Ver la version de git
