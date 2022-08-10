@@ -36,6 +36,13 @@ Antes de seguir... Git tiene las siguientes fases:
     -Usar el siguiente comando renombra un archivo y lo añade directamente al stage sin tener que usar el add.
         git mv NombreAnterior NombreNuevo
 
+5. git status mejorado...
+    Hay un comando que quita texto de sobra que es igual que git status, da la misma info pero sin texto de relleno una vez sabes como va...
+        git status -s
+
+6. Visualizar cambios.
+    El siguiente comando muestra los cambios entre el archivo anterior y el archivo que sera añadido al stage que está en rojo aun
+        git diff
 
 ##############################################################################
 ###Comandos de CONFIGURACION:###
