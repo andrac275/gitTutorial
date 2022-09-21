@@ -60,6 +60,18 @@ Antes de seguir... Git tiene las siguientes fases:
 9. Actualizar repositorio, descargar pushes.
     git fetch   <- Solo trae datos, hay que combinarlos manualmente
     git pull    <- Trae los datos y los combina automaticamente
+
+10. Git commit
+    Utilizado para guardar cambios al STAGE.
+    git commit -m "Nombre del comit"
+    git commit -am "Nombre del comit"   <- La opcion -a hace un 'git Add *' automaticamente
+
+    10.1Deshacer un commit recien hecho:
+        --amend
+        Ejemplo:
+            git commit -m "Cambios en usuario.txt"
+            git add archivoOlvidado.txt
+            git commit --amend
 -------------------
 Ramas:
 1.Ver todas las ramas del proyecto:
