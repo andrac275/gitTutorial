@@ -32,6 +32,7 @@ Antes de seguir... Git tiene las siguientes fases:
     -Si se habia eliminado un fichero a la papelera con el 'git rm ArchivoEliminar'
     a parte del 'git restore --staged ArchivoEliminar' de antes, hay que...
         git restore ArchivoEliminar
+
 4.Renombrar ficheros
     -Usar el siguiente comando renombra un archivo y lo añade directamente al stage sin tener que usar el add.
         git mv NombreAnterior NombreNuevo
@@ -52,20 +53,27 @@ Antes de seguir... Git tiene las siguientes fases:
     Version simplificada de lo anterior, tiene el id del commit y el nombre del commit.
         git log --oneline
 
+8. Deshacer un archivo modificado
+    Si modificamos un archivo respecto a un ultimo commit y queremos deshacer las modificaciones de dicho archivo 
+        git checkout -- ARCHIVO
+
+9. Actualizar repositorio, descargar pushes.
+    git fetch   <- Solo trae datos, hay que combinarlos manualmente
+    git pull    <- Trae los datos y los combina automaticamente
 -------------------
 Ramas:
-8.Ver todas las ramas del proyecto:
+1.Ver todas las ramas del proyecto:
     git branch
 
-9.Crear y cambiar de rama:
+2.Crear y cambiar de rama:
     git checkout -b NombreNuevaRama  <<-- Crea y cambia de rama a la vez
     git checkout NombreRama <-- Te mueves a NombreRama
 
-10.Merge de una rama a otra
+3.Merge de una rama a otra
     IMPORTANTE! Estar en la rama que recibe el merge. Si queremos que 'main' reciba los cambios, pues estar en 'main'
         gir merge ramaB
 
-11.Conectando con GitHUB
+4.Conectando con GitHUB
     El PRIMER PUSH es importante... Se accede a github, se registra/loggea uno y se crea el repositorio.
     En el propio git aparece que dos lineas copiar...
         git remote add origin https://github.com/andrac275/gitTutorial  <- para decir el server remoto, en este caso en gitHub, es donde estará nuestro codigo para hacer push o pull
