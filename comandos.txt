@@ -63,7 +63,9 @@ Antes de seguir... Git tiene las siguientes fases:
 -------------------
 Ramas:
 1.Ver todas las ramas del proyecto:
+    NOTA: De las ramas que aparecen, la que tiene un asterisco * es la rama con el HEAD (la activa)
     git branch
+    git branch -v  <- Muestra el ultimo commit de cada rama.
 
 2.Crear y cambiar de rama:
     git checkout -b NombreNuevaRama  <<-- Crea y cambia de rama a la vez
@@ -71,9 +73,19 @@ Ramas:
 
 3.Merge de una rama a otra
     IMPORTANTE! Estar en la rama que recibe el merge. Si queremos que 'main' reciba los cambios, pues estar en 'main'
-        gir merge ramaB
+        git merge ramaB
 
-4.Conectando con GitHUB
+4.Fusion de ramas.
+    Al hacer merge, si la rama que recibe el merge estaba avanzada va a haber que fusionar.
+    Git no crea automaticamene una nueva fusion confirmada, espera a que las personas RESUELVAN el conflicto MANUALMENTE
+    PAra ello...
+        Al hacer git status aparece "unmerged paths" y se tiene que hacer los cambios en el archivo manualmente, DESPUES
+            ya se hace el git add. Cuando este todo solucionado, ya se lanza el git commit.
+
+5. Borrar una rama
+    git branch -d NOMBRERAMA    <-- Borra la rama llamada NOMBRERAMA
+
+6.Conectando con GitHUB
     El PRIMER PUSH es importante... Se accede a github, se registra/loggea uno y se crea el repositorio.
     En el propio git aparece que dos lineas copiar...
         git remote add origin https://github.com/andrac275/gitTutorial  <- para decir el server remoto, en este caso en gitHub, es donde estará nuestro codigo para hacer push o pull
